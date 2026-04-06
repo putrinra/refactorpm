@@ -1,19 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { message } from 'antd'
-import {
-  buildDeviceItems,
-  createDeviceFormState,
-  getDevicePropertySchema,
-  loadProjectDevices,
-  saveProjectDevices,
-} from '../projectStorage.js'
-import {
-  connectProjectStream,
-  fetchProjectDevices,
-  subscribeProjectDevice,
-  unsubscribeProjectDevice,
-  updateProjectDevice,
-} from '../../../api/projectApi.js' // Pastikan jumlah titik-titiknya sesuai dengan posisi folder API kamu
+import {buildDeviceItems, createDeviceFormState, getDevicePropertySchema, loadProjectDevices, saveProjectDevices} from '../projectStorage.js'
+import {connectProjectStream, fetchProjectDevices, subscribeProjectDevice, unsubscribeProjectDevice, updateProjectDevice} from '../../../api/projectApi.js'
 
 export function useProjectManager(navigate) {
   const [devices, setDevices] = useState(() => loadProjectDevices())
@@ -289,44 +277,19 @@ export function useProjectManager(navigate) {
   }, [])
 
   return {
-    devices,
-    activeDeviceId,
-    activeDevice,
-    activeDeviceItems,
-    visibleActiveDeviceProperties,
-    isAddModalOpen,
-    setIsAddModalOpen,
+    devices, activeDeviceId, activeDevice, activeDeviceItems, visibleActiveDeviceProperties, isAddModalOpen, setIsAddModalOpen,
     openAddModal: () => {
       setAddForm(createDeviceFormState('Modicon'))
       setIsAddModalOpen(true)
     },
     closeAddModal: () => setIsAddModalOpen(false),
-    isEditModalOpen,
-    setIsEditModalOpen,
-    openEditModal,
+    isEditModalOpen, setIsEditModalOpen, openEditModal,
     closeEditModal: () => setIsEditModalOpen(false),
-    isDeleteModalOpen,
-    setIsDeleteModalOpen,
+    isDeleteModalOpen,setIsDeleteModalOpen,
     openDeleteModal: () => activeDevice && setIsDeleteModalOpen(true),
     closeDeleteModal: () => setIsDeleteModalOpen(false),
-    isDarkMode,
-    setIsDarkMode,
-    time,
-    dataSource,
-    addForm,
-    editForm,
-    addFormFields,
-    editFormFields,
-    handleAddFieldChange,
-    handleEditFieldChange,
-    handleAddSubmit,
-    handleEditSubmit,
-    handleDeleteDevice,
-    toggleSelectedDevice,
-    openTagConfiguration,
-    getMatchTone,
-    canAddDevice,
-    canDeleteDevice,
+    isDarkMode, setIsDarkMode, time, dataSource, addForm, editForm, addFormFields, editFormFields, handleAddFieldChange, handleEditFieldChange,
+    handleAddSubmit, handleEditSubmit, handleDeleteDevice, toggleSelectedDevice, openTagConfiguration, getMatchTone, canAddDevice, canDeleteDevice,
     addDisabled: !canAddDevice,
     editDisabled: !activeDevice,
   }
