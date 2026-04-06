@@ -24,7 +24,7 @@
 }
 
 .project-tag-page.is-dark .project-tag-topbar {
-  background: #1a1d24;
+  background: #141414;
   border-bottom-color: #2a2e39;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
@@ -130,7 +130,7 @@
 .project-tag-page.is-dark .project-tag-toolbar-card,
 .project-tag-page.is-dark .project-tag-table-card,
 .project-tag-page.is-dark .project-modal {
-  background: #1a1d24;
+  background: #141414;
   border-color: #2a2e39;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
@@ -314,7 +314,7 @@
 
 .project-tag-page.is-dark .project-tag-table-top,
 .project-tag-page.is-dark .project-modal-head {
-  background: #1a1d24;
+  background: #141414;
   border-bottom-color: #2a2e39;
 }
 
@@ -391,7 +391,7 @@
 }
 
 .project-tag-page.is-dark .project-tag-table td {
-  background: #1a1d24;
+  background: #141414;
   border-top-color: #222630;
 }
 
