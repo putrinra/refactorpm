@@ -343,7 +343,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: 10px;
 }
 
 .project-summary-copy h2 {
@@ -385,7 +385,7 @@
 
 .project-stat-card {
   min-width: 110px;
-  padding: 14px 16px;
+  padding: 14px 10px;
   border: 1px solid #f0f0f0;
   border-radius: 12px;
   background: #fafafa;
@@ -409,7 +409,7 @@
 .project-detail-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: 10px;
 }
 
 .project-section-card {
@@ -528,7 +528,7 @@
   max-height: calc(100vh - 48px);
   background: #ffffff;
   border: 1px solid #f0f0f0;
-  border-radius: 14px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
